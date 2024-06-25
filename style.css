@@ -1,0 +1,429 @@
+HTML CSSResult Skip Results Iframe
+EDIT ON
+/*Reset CSS*/
+
+html{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    font-family: Arial;
+    font-size: 18px;
+}
+
+body {
+    background-color: #e88a28;
+    color: #141414;
+    font-family: Arial;
+    font-size: 18px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+
+}
+
+/* ----------------------------------------------------------------- */
+
+nav{
+    position: center;
+	margin: 0px auto;
+    border: 2px solid #000000;
+    background: #00a2e8;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li:hover {
+    background-color: #ed1c24;
+    border: 1px solid #000000;
+    z-index: -1;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom: 0px solid transparent;/*Evite le décalage des éléments sous le menu à cause de la bordure en :hover*/
+}
+
+nav ul li{
+    float: left;
+    width: 24.97%;/*100% divisé par le nombre d'éléments de menu*/
+    text-align: center;/*Centre le texte dans les éléments de menu*/
+    bottom: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav a{
+    display: center;
+    display: block; /*Toute la surface sera cliquable*/
+    text-decoration: none;
+    color: white;
+    border-style: 5px white;
+    padding: 15px 0px;/*Agrandit le menu et espace la bordure du texte*/
+}
+
+
+
+/*--------------------------------------------------------------------------*/
+.sub-menu-1 {
+    display: none; /* Cacher le bouton par défaut */
+}
+.menu-list-1:hover {
+    .sub-menu-1{
+        display: block;
+    }
+}
+
+nav > ul li:hover .sub-menu-1{
+    display: block;
+}
+
+.sub-menu-1 li{
+    float: none;
+    width: 100%;
+    text-align: center;
+}
+/*------------------------------------------*/
+.sub-menu-2 {
+    display: none; /* Cacher le bouton par défaut */
+}
+.menu-list-2:hover {
+    .sub-menu-2{
+        display: block;
+    }
+}
+
+nav > ul li:hover .sub-menu-2{
+    display: block;
+}
+
+.sub-menu-2 li{
+    float: none;
+    width: 100%;
+    text-align: center;
+}
+/*------------------------------------------*/
+.sub-menu-3 {
+    display: none; /* Cacher le bouton par défaut */
+}
+.menu-list-3:hover {
+    .sub-menu-3{
+        display: block;
+    }
+}
+
+nav > ul li:hover .sub-menu-3{
+    display: block;
+}
+
+.sub-menu-3 li{
+    float: none;
+    width: 100%;
+    text-align: center;
+}
+/*------------------------------------------*/
+.sub-menu-4 {
+    display: none; /* Cacher le bouton par défaut */
+}
+.menu-list-4:hover {
+    .sub-menu-4{
+        display: block;
+    }
+}
+
+nav > ul li:hover .sub-menu-4{
+    display: block;
+}
+
+.sub-menu-4 li{
+    float: none;
+    width: 100%;
+    text-align: center;
+}
+/*--------------------------------------------------------------------------*/
+.menu-btn {
+    display: none; /* Cacher le bouton par défaut */
+}
+
+/* Media queries pour le rendu responsive */
+@media screen and (max-width: 1629px) {
+    nav {
+        display: none;
+    }
+    nav ul {
+        display: none;
+    }
+    
+    .menu-btn {
+        font-size: 25px;
+        padding: 1.5%;
+        margin: 1.5%;
+        display: block; /* Afficher le bouton */
+        border: 1px solid #000000;
+        background: #00a2e8;
+        border-bottom-left-radius: 100px;
+        border-bottom-right-radius: 100px;
+        border-top-left-radius: 100px;
+        border-top-right-radius: 100px;
+        z-index: -1;
+        color: white;
+        border-style: 5px white;
+ 
+    }
+    .menu-btn:hover {
+        background-color: #ed1c24;
+        border: 1px solid #000000;
+        z-index: -1;
+
+    }
+}
+
+/* Media queries pour le rendu responsive */
+@media screen and (max-width: 600px) {
+    nav {
+        display: none;
+    }
+    nav ul {
+        display: none;
+    }
+    
+    .menu-btn {
+        font-size: 20px;
+        padding: 5%;
+        margin: 5%;
+
+        display: block; /* Afficher le bouton */
+        border: 1px solid #000000;
+        background: #00a2e8;
+        border-bottom-left-radius: 100px;
+        border-bottom-right-radius: 100px;
+        border-top-left-radius: 100px;
+        border-top-right-radius: 100px;
+        z-index: -1;
+        color: white;
+        border-style: 5px white;
+    }
+    .menu-btn:hover {
+        background-color: #ed1c24;
+        border: 1px solid #000000;
+        z-index: -1;
+    }
+}
+
+/* ----------------------------------------------------------------- */
+
+.navlink:last-child {
+    border-left: none;
+    border-right: none;
+}
+
+.conteneur{
+    margin: 0px 0px;
+    height: 1500px;
+} 
+
+nav #li-deb{
+    border-right: 1px solid white;
+}
+
+nav #li-mid{
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+}
+
+nav #li-fin{
+    border-left: 1px solid white;
+}
+
+.submenu{
+    display: none;
+}
+
+nav ul::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+h6 a{
+    color: white;
+    text-decoration: none;
+    font-family: Arial;
+    font-size: 15px;
+    position: center;
+	margin: 0px auto;
+    border: 1px solid white;
+    background: #00a2e8;
+    width: 15%;
+    border-radius: 10px;
+    padding: 0;
+    margin: 0;
+    display: center;
+    display: block; /*Toute la surface sera cliquable*/
+    text-decoration: none;
+    color: white;
+    border-style: 5px white;
+    padding: 13px 0px;/*Agrandit le menu et espace la bordure du texte*/
+}
+
+h6 a:hover {
+    background-color: #00a2e8;
+    z-index: -1;
+    border-radius: 10px;
+}
+
+/*
+h6 {
+    color: white;
+    text-decoration: none;
+    font-family: Arial;
+    font-size: 20;
+    position: center;
+	margin: 0px auto;
+    border: 1px solid white;
+    background: #ee0000;
+    width: 15%;
+    border-radius: 10px;
+    padding: 0;
+    margin: 0;
+    display: center;
+    display: block; *Toute la surface sera cliquable*
+    text-decoration: none;
+    color: white;
+    border-bottom: 0px solid transparent; *Evite le décalage des éléments sous le menu à cause de la bordure en :hover*
+    border-style: 5px white;
+    padding: 15px 0px;*Agrandit le menu et espace la bordure du texte*
+}
+
+h6:hover {
+    background-color: #ffb516;
+    z-index: -1;
+    border-radius: 10px;
+}
+*/
+
+h4{
+    color: #141414;
+    text-decoration: none;
+    font-family: Arial;
+    font-size: 25;
+}
+
+/* Monospaced elements */
+kbd, pre, .command {
+    font-family:monospace;
+  }
+  .systemitem {
+    font-style:italic;
+  }
+  pre {
+    background-color:#242424;
+    color:#ffffff;
+    margin:1em;
+    padding:.2em .5em .5em 2em;
+    border-radius:8px;
+    position:relative;
+    box-sizing: border-box;
+    overflow:auto;
+    font-weight:bold;
+    display: inline-block;
+  }
+
+
+
+  ::selection {
+    color: rgb(0, 0, 0);
+    background: #3cff00;
+  }
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #e88a28; 
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: repeating-linear-gradient(to right, #00a2e8, #ffffff, #ed1c24);
+    border-radius: 7px;
+    border: 1px solid white;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: repeating-linear-gradient(to right, #00a2e8, #ffffff, #ed1c24);
+    border-radius: 7px;
+    border: 1px solid white;
+  }
+
+  h5 a{
+    color: white;
+    text-decoration: none;
+    font-family: Arial;
+    font-size: 14px;
+	margin: 0px auto;
+    border: 2px solid #000000;
+    background: #ffcf09;
+    width: 1200px;
+    border-radius: 10px;
+    padding: 0;
+    margin: 0;
+    display: block; /*Toute la surface sera cliquable*/
+    text-decoration: none;
+    color: #000000;
+    padding: 13px 0px;/*Agrandit le menu et espace la bordure du texte*/
+}
+
+h5 a:hover {
+    background-color: #e88a28;
+    border-radius: 10px;
+}
+
+hr {
+    background-color: #000000;
+    border-radius: 1px;
+    border: 0px solid;
+    color: #fff;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+}
+  
+.column1 {
+    flex: 1;
+    padding: 0px;
+}
+
+.column2 {
+    flex: 1;
+    padding: 0px;
+}
+
+.column3 {
+    flex: 1;
+    padding: 0px;
+}
+
+a{
+    padding: 100;
+}
